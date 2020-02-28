@@ -26,7 +26,9 @@ class CTBaseAPIViewController: UIViewController {
         return _tableView
     }()
     
-    var dataSource = [[String:String]]()
+    lazy var dataSource:[[String:String]] = {
+        return []
+    }()
 
     var apiManager:CTNetworkingAPIManager? = nil
 }

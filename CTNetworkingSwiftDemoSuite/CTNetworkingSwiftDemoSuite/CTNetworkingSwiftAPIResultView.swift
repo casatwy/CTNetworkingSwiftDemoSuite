@@ -10,7 +10,74 @@ import UIKit
 import SwiftHandyFrame
 
 class CTNetworkingSwiftAPIResultView: UIView {
+
+    // MARK: life cycle
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
     
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
+    
+    private func setupView() {
+        backgroundColor = UIColor.init(displayP3Red: 0, green: 0, blue: 0, alpha: 0.8)
+        textView.addGestureRecognizer(tapGestureRecognizer)
+        
+        addSubview(textView)
+        addSubview(activityIndicatorView)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if textView.text.count > 0 {
+            activityIndicatorView.frame = .zero
+            textView.hf.setSize(CGSize(width: hf.width()-20, height: hf.height()-20))
+        } else {
+            activityIndicatorView.hf.setSize(CGSize(width: 200, height: 200))
+            textView.frame = .zero
+        }
+        
+        activityIndicatorView.hf.setCenterEqualToView(self)
+        textView.hf.setCenterEqualToView(self)
+    }
+    
+    // MARK: static methods
+    static func showInView(_ view:UIView) {
+        let instanceView = CTNetworkingSwiftAPIResultView()
+        instanceView.alpha = 0
+        view.addSubview(instanceView)
+        instanceView.hf.fill()
+        instanceView.hf.setInnerTopGap(64, shouldResize: true)
+        UIView.animate(withDuration: 0.3) {
+            instanceView.alpha = 1
+        }
+    }
+    
+    static func config(content:String, in view:UIView) {
+        for subview in view.subviews {
+            guard let resultView = subview as? CTNetworkingSwiftAPIResultView else { continue }
+            resultView.textView.text = content
+            resultView.activityIndicatorView.stopAnimating()
+            resultView.layoutSubviews()
+            return
+        }
+    }
+    
+
+    
+    // MARK: event response
+    @objc func didRecognizedTapGestureRecognizer(_ gestureRecognizer:UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+            self?.alpha = 0
+        }) { [weak self] (finished) in
+            self?.removeFromSuperview()
+        }
+    }
+    
+    // MARK: getters and setters
     lazy var textView:UITextView = {
         let _textView = UITextView()
         _textView.textColor = .black
@@ -35,65 +102,4 @@ class CTNetworkingSwiftAPIResultView: UIView {
         let _tapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(didRecognizedTapGestureRecognizer(_:)))
         return _tapGestureRecognizer
     }()
-    
-    @objc func didRecognizedTapGestureRecognizer(_ gestureRecognizer:UITapGestureRecognizer) {
-        UIView.animate(withDuration: 0.3, animations: { [weak self] in
-            self?.alpha = 0
-        }) { [weak self] (finished) in
-            self?.removeFromSuperview()
-        }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupView()
-    }
-    
-    func setupView() {
-        backgroundColor = UIColor.init(displayP3Red: 0, green: 0, blue: 0, alpha: 0.8)
-        textView.addGestureRecognizer(tapGestureRecognizer)
-        
-        addSubview(textView)
-        addSubview(activityIndicatorView)
-    }
-    
-    static func showInView(_ view:UIView) {
-        let instanceView = CTNetworkingSwiftAPIResultView()
-        instanceView.alpha = 0
-        view.addSubview(instanceView)
-        instanceView.hf.fill()
-        instanceView.hf.setInnerTopGap(64, shouldResize: true)
-        UIView.animate(withDuration: 0.3) {
-            instanceView.alpha = 1
-        }
-    }
-    
-    static func config(content:String, in view:UIView) {
-        for subview in view.subviews {
-            guard let resultView = subview as? CTNetworkingSwiftAPIResultView else { continue }
-            resultView.textView.text = content
-            resultView.activityIndicatorView.stopAnimating()
-            resultView.layoutSubviews()
-            return
-        }
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if textView.text.count > 0 {
-            activityIndicatorView.frame = .zero
-            textView.hf.setSize(CGSize(width: hf.width()-20, height: hf.height()-20))
-        } else {
-            activityIndicatorView.hf.setSize(CGSize(width: 200, height: 200))
-            textView.frame = .zero
-        }
-        
-        activityIndicatorView.hf.setCenterEqualToView(self)
-        textView.hf.setCenterEqualToView(self)
-    }
 }

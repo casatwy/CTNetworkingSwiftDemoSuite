@@ -16,7 +16,7 @@ public struct Constants {
     }
 }
 
-class CTBaseAPIViewController: UIViewController {
+open class CTBaseAPIViewController: UIViewController {
     lazy var tableView:UITableView = {
         let _tableView = UITableView.init(frame: .zero, style: .plain)
         _tableView.delegate = self

@@ -9,7 +9,7 @@
 import UIKit
 import CTNetworkingSwift
 
-class CTPagableAPIViewController: UIViewController {
+open class CTPagableAPIViewController: UIViewController {
     lazy var statusLabel:UILabel = {
         let _statusLabel = UILabel.init()
         _statusLabel.text = "..."

@@ -20,7 +20,7 @@ extension CTBaseAPIViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let apiManagerClassName = dataSource[indexPath.row][Constants.DataSource.kClass] else { return }
-        guard let apiManagerClass = NSClassFromString(apiManagerClassName) else { return }
+        guard let apiManagerClass = NSClassFromString("CTNetworkingSwiftDemoSuite.\(apiManagerClassName)") as? NSObject.Type else { return }
         guard let apiManager = apiManagerClass.init() as? CTNetworkingAPIManager else { return }
         guard let paramSource = self as? CTNetworkingAPIManagerParamSource else { return }
 

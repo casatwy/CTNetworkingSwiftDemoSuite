@@ -13,9 +13,11 @@
 		4A02B6BE2409151D00A761DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A02B6BC2409151D00A761DF /* Main.storyboard */; };
 		4A02B6C02409151E00A761DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A02B6BF2409151E00A761DF /* Assets.xcassets */; };
 		4A02B6C32409151E00A761DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A02B6C12409151E00A761DF /* LaunchScreen.storyboard */; };
+		D1AAEE2A30494DF16D8C235C /* Pods_CTNetworkingSwiftDemoSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3347F16A72BC8915612B1041 /* Pods_CTNetworkingSwiftDemoSuite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3347F16A72BC8915612B1041 /* Pods_CTNetworkingSwiftDemoSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTNetworkingSwiftDemoSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A02B6B32409151D00A761DF /* CTNetworkingSwiftDemoSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTNetworkingSwiftDemoSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A02B6B62409151D00A761DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A02B6B82409151D00A761DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		4A02B6BF2409151E00A761DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A02B6C22409151E00A761DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A02B6C42409151E00A761DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		619C91A778BF575F1B02A8AC /* Pods-CTNetworkingSwiftDemoSuite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwiftDemoSuite.release.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite.release.xcconfig"; sourceTree = "<group>"; };
+		8EC77DED2EC8F5F425E34514 /* Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1AAEE2A30494DF16D8C235C /* Pods_CTNetworkingSwiftDemoSuite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1CBB80C4C85EF6FAE8A5CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3347F16A72BC8915612B1041 /* Pods_CTNetworkingSwiftDemoSuite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4A02B6AA2409151D00A761DF = {
 			isa = PBXGroup;
 			children = (
 				4A02B6B52409151D00A761DF /* CTNetworkingSwiftDemoSuite */,
 				4A02B6B42409151D00A761DF /* Products */,
+				9D5ED318D706703FCD96452E /* Pods */,
+				2A1CBB80C4C85EF6FAE8A5CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = CTNetworkingSwiftDemoSuite;
 			sourceTree = "<group>";
 		};
+		9D5ED318D706703FCD96452E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EC77DED2EC8F5F425E34514 /* Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig */,
+				619C91A778BF575F1B02A8AC /* Pods-CTNetworkingSwiftDemoSuite.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A02B6C72409151E00A761DF /* Build configuration list for PBXNativeTarget "CTNetworkingSwiftDemoSuite" */;
 			buildPhases = (
+				AC80E4090896B153E2A5DFEE /* [CP] Check Pods Manifest.lock */,
 				4A02B6AF2409151D00A761DF /* Sources */,
 				4A02B6B02409151D00A761DF /* Frameworks */,
 				4A02B6B12409151D00A761DF /* Resources */,
+				13212C3644D132B77CA9F512 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13212C3644D132B77CA9F512 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC80E4090896B153E2A5DFEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CTNetworkingSwiftDemoSuite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A02B6AF2409151D00A761DF /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		4A02B6C82409151E00A761DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EC77DED2EC8F5F425E34514 /* Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		4A02B6C92409151E00A761DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619C91A778BF575F1B02A8AC /* Pods-CTNetworkingSwiftDemoSuite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

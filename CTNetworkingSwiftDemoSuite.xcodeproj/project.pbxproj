@@ -17,7 +17,12 @@
 		4A02B6CF2409167C00A761DF /* TableView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6CE2409167C00A761DF /* TableView.extension.swift */; };
 		4A02B6D1240916A200A761DF /* Callback.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6D0240916A200A761DF /* Callback.extension.swift */; };
 		4A02B6D624091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6D524091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift */; };
-		4A02B6D824091CB000A761DF /* Static.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6D724091CB000A761DF /* Static.extension.swift */; };
+		4A1172C72409602B002411F6 /* LifeCycle.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1172C62409602B002411F6 /* LifeCycle.extension.swift */; };
+		4A1172CA240960D2002411F6 /* CTBaseAPITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1172C9240960D2002411F6 /* CTBaseAPITableViewCell.swift */; };
+		4A6E4B9B24096D95003FA276 /* Callback.pagable.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6E4B9A24096D95003FA276 /* Callback.pagable.extension.swift */; };
+		4AFD62032409690F00659427 /* CTPagableAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD62022409690F00659427 /* CTPagableAPIViewController.swift */; };
+		4AFD620524096A9500659427 /* Event.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD620424096A9500659427 /* Event.extension.swift */; };
+		4AFD620724096CBE00659427 /* LifeCycle.pagable.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD620624096CBE00659427 /* LifeCycle.pagable.extension.swift */; };
 		D1AAEE2A30494DF16D8C235C /* Pods_CTNetworkingSwiftDemoSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3347F16A72BC8915612B1041 /* Pods_CTNetworkingSwiftDemoSuite.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +40,12 @@
 		4A02B6CE2409167C00A761DF /* TableView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.extension.swift; sourceTree = "<group>"; };
 		4A02B6D0240916A200A761DF /* Callback.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.extension.swift; sourceTree = "<group>"; };
 		4A02B6D524091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingSwiftAPIResultView.swift; sourceTree = "<group>"; };
-		4A02B6D724091CB000A761DF /* Static.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static.extension.swift; sourceTree = "<group>"; };
+		4A1172C62409602B002411F6 /* LifeCycle.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.extension.swift; sourceTree = "<group>"; };
+		4A1172C9240960D2002411F6 /* CTBaseAPITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTBaseAPITableViewCell.swift; sourceTree = "<group>"; };
+		4A6E4B9A24096D95003FA276 /* Callback.pagable.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.pagable.extension.swift; sourceTree = "<group>"; };
+		4AFD62022409690F00659427 /* CTPagableAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTPagableAPIViewController.swift; sourceTree = "<group>"; };
+		4AFD620424096A9500659427 /* Event.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.extension.swift; sourceTree = "<group>"; };
+		4AFD620624096CBE00659427 /* LifeCycle.pagable.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.pagable.extension.swift; sourceTree = "<group>"; };
 		619C91A778BF575F1B02A8AC /* Pods-CTNetworkingSwiftDemoSuite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwiftDemoSuite.release.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite.release.xcconfig"; sourceTree = "<group>"; };
 		8EC77DED2EC8F5F425E34514 /* Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +106,9 @@
 		4A02B6CA2409162700A761DF /* CTNetworkingSwiftDemoSuite */ = {
 			isa = PBXGroup;
 			children = (
-				4A02B6D424091C9700A761DF /* CTNetworkingSwiftAPIResultView */,
+				4A02B6D524091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift */,
+				4A1172C9240960D2002411F6 /* CTBaseAPITableViewCell.swift */,
+				4AFD6201240968F800659427 /* CTPagableAPIViewController */,
 				4A02B6CB2409162700A761DF /* CTBaseAPIViewController */,
 			);
 			path = CTNetworkingSwiftDemoSuite;
@@ -106,19 +118,22 @@
 			isa = PBXGroup;
 			children = (
 				4A02B6CC2409164500A761DF /* CTBaseAPIViewController.swift */,
+				4A1172C62409602B002411F6 /* LifeCycle.extension.swift */,
 				4A02B6CE2409167C00A761DF /* TableView.extension.swift */,
 				4A02B6D0240916A200A761DF /* Callback.extension.swift */,
 			);
 			path = CTBaseAPIViewController;
 			sourceTree = "<group>";
 		};
-		4A02B6D424091C9700A761DF /* CTNetworkingSwiftAPIResultView */ = {
+		4AFD6201240968F800659427 /* CTPagableAPIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4A02B6D524091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift */,
-				4A02B6D724091CB000A761DF /* Static.extension.swift */,
+				4AFD62022409690F00659427 /* CTPagableAPIViewController.swift */,
+				4AFD620424096A9500659427 /* Event.extension.swift */,
+				4AFD620624096CBE00659427 /* LifeCycle.pagable.extension.swift */,
+				4A6E4B9A24096D95003FA276 /* Callback.pagable.extension.swift */,
 			);
-			path = CTNetworkingSwiftAPIResultView;
+			path = CTPagableAPIViewController;
 			sourceTree = "<group>";
 		};
 		9D5ED318D706703FCD96452E /* Pods */ = {
@@ -249,10 +264,15 @@
 				4A02B6B72409151D00A761DF /* AppDelegate.swift in Sources */,
 				4A02B6B92409151D00A761DF /* SceneDelegate.swift in Sources */,
 				4A02B6CF2409167C00A761DF /* TableView.extension.swift in Sources */,
-				4A02B6D824091CB000A761DF /* Static.extension.swift in Sources */,
+				4AFD62032409690F00659427 /* CTPagableAPIViewController.swift in Sources */,
 				4A02B6CD2409164500A761DF /* CTBaseAPIViewController.swift in Sources */,
 				4A02B6D1240916A200A761DF /* Callback.extension.swift in Sources */,
+				4A6E4B9B24096D95003FA276 /* Callback.pagable.extension.swift in Sources */,
+				4A1172CA240960D2002411F6 /* CTBaseAPITableViewCell.swift in Sources */,
+				4AFD620524096A9500659427 /* Event.extension.swift in Sources */,
 				4A02B6D624091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift in Sources */,
+				4A1172C72409602B002411F6 /* LifeCycle.extension.swift in Sources */,
+				4AFD620724096CBE00659427 /* LifeCycle.pagable.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

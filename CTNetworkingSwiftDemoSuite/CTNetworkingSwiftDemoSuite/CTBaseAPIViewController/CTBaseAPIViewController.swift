@@ -7,9 +7,26 @@
 //
 
 import UIKit
+import CTNetworkingSwift
+
+public struct Constants {
+    struct DataSource {
+        static let kTitle = "kTitle"
+        static let kClass = "kClass"
+    }
+}
 
 class CTBaseAPIViewController: UIViewController {
     lazy var tableView:UITableView = {
-        
+        let _tableView = UITableView.init(frame: .zero, style: .plain)
+        _tableView.delegate = self
+        _tableView.dataSource = self
+        _tableView.tableFooterView = UIView()
+        _tableView.register(CTBaseAPITableViewCell.self, forCellReuseIdentifier: "cell")
+        return _tableView
     }()
+    
+    var dataSource = [[String:String]]()
+
+    var apiManager:CTNetworkingAPIManager? = nil
 }

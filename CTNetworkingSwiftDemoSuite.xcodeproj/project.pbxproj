@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		4A02B6BE2409151D00A761DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A02B6BC2409151D00A761DF /* Main.storyboard */; };
 		4A02B6C02409151E00A761DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A02B6BF2409151E00A761DF /* Assets.xcassets */; };
 		4A02B6C32409151E00A761DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A02B6C12409151E00A761DF /* LaunchScreen.storyboard */; };
+		4A02B6CD2409164500A761DF /* CTBaseAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6CC2409164500A761DF /* CTBaseAPIViewController.swift */; };
+		4A02B6CF2409167C00A761DF /* TableView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6CE2409167C00A761DF /* TableView.extension.swift */; };
+		4A02B6D1240916A200A761DF /* Callback.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6D0240916A200A761DF /* Callback.extension.swift */; };
+		4A02B6D624091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6D524091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift */; };
+		4A02B6D824091CB000A761DF /* Static.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B6D724091CB000A761DF /* Static.extension.swift */; };
 		D1AAEE2A30494DF16D8C235C /* Pods_CTNetworkingSwiftDemoSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3347F16A72BC8915612B1041 /* Pods_CTNetworkingSwiftDemoSuite.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +31,11 @@
 		4A02B6BF2409151E00A761DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A02B6C22409151E00A761DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A02B6C42409151E00A761DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A02B6CC2409164500A761DF /* CTBaseAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTBaseAPIViewController.swift; sourceTree = "<group>"; };
+		4A02B6CE2409167C00A761DF /* TableView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.extension.swift; sourceTree = "<group>"; };
+		4A02B6D0240916A200A761DF /* Callback.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.extension.swift; sourceTree = "<group>"; };
+		4A02B6D524091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTNetworkingSwiftAPIResultView.swift; sourceTree = "<group>"; };
+		4A02B6D724091CB000A761DF /* Static.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static.extension.swift; sourceTree = "<group>"; };
 		619C91A778BF575F1B02A8AC /* Pods-CTNetworkingSwiftDemoSuite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwiftDemoSuite.release.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite.release.xcconfig"; sourceTree = "<group>"; };
 		8EC77DED2EC8F5F425E34514 /* Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig"; path = "Target Support Files/Pods-CTNetworkingSwiftDemoSuite/Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +81,7 @@
 		4A02B6B52409151D00A761DF /* CTNetworkingSwiftDemoSuite */ = {
 			isa = PBXGroup;
 			children = (
+				4A02B6CA2409162700A761DF /* CTNetworkingSwiftDemoSuite */,
 				4A02B6B62409151D00A761DF /* AppDelegate.swift */,
 				4A02B6B82409151D00A761DF /* SceneDelegate.swift */,
 				4A02B6BA2409151D00A761DF /* ViewController.swift */,
@@ -82,13 +93,40 @@
 			path = CTNetworkingSwiftDemoSuite;
 			sourceTree = "<group>";
 		};
+		4A02B6CA2409162700A761DF /* CTNetworkingSwiftDemoSuite */ = {
+			isa = PBXGroup;
+			children = (
+				4A02B6D424091C9700A761DF /* CTNetworkingSwiftAPIResultView */,
+				4A02B6CB2409162700A761DF /* CTBaseAPIViewController */,
+			);
+			path = CTNetworkingSwiftDemoSuite;
+			sourceTree = "<group>";
+		};
+		4A02B6CB2409162700A761DF /* CTBaseAPIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A02B6CC2409164500A761DF /* CTBaseAPIViewController.swift */,
+				4A02B6CE2409167C00A761DF /* TableView.extension.swift */,
+				4A02B6D0240916A200A761DF /* Callback.extension.swift */,
+			);
+			path = CTBaseAPIViewController;
+			sourceTree = "<group>";
+		};
+		4A02B6D424091C9700A761DF /* CTNetworkingSwiftAPIResultView */ = {
+			isa = PBXGroup;
+			children = (
+				4A02B6D524091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift */,
+				4A02B6D724091CB000A761DF /* Static.extension.swift */,
+			);
+			path = CTNetworkingSwiftAPIResultView;
+			sourceTree = "<group>";
+		};
 		9D5ED318D706703FCD96452E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				8EC77DED2EC8F5F425E34514 /* Pods-CTNetworkingSwiftDemoSuite.debug.xcconfig */,
 				619C91A778BF575F1B02A8AC /* Pods-CTNetworkingSwiftDemoSuite.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +248,11 @@
 				4A02B6BB2409151D00A761DF /* ViewController.swift in Sources */,
 				4A02B6B72409151D00A761DF /* AppDelegate.swift in Sources */,
 				4A02B6B92409151D00A761DF /* SceneDelegate.swift in Sources */,
+				4A02B6CF2409167C00A761DF /* TableView.extension.swift in Sources */,
+				4A02B6D824091CB000A761DF /* Static.extension.swift in Sources */,
+				4A02B6CD2409164500A761DF /* CTBaseAPIViewController.swift in Sources */,
+				4A02B6D1240916A200A761DF /* Callback.extension.swift in Sources */,
+				4A02B6D624091C9700A761DF /* CTNetworkingSwiftAPIResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

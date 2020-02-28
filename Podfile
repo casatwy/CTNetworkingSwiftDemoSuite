@@ -7,5 +7,6 @@ target 'CTNetworkingSwiftDemoSuite' do
 
   # Pods for CTNetworkingSwiftDemoSuite
   pod "SwiftHandyFrame"
+  pod "CTNetworkingSwift"
 
 end

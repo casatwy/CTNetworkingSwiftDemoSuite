@@ -10,13 +10,13 @@ import UIKit
 import CTNetworkingSwift
 
 public struct Constants {
-    struct DataSource {
-        static let kTitle = "kTitle"
-        static let kClass = "kClass"
+    public struct DataSource {
+        public static let kTitle = "kTitle"
+        public static let kClass = "kClass"
     }
 }
 
-open class CTBaseAPIViewController: UIViewController {
+open class CTBaseAPIViewController : UIViewController {
     lazy var tableView:UITableView = {
         let _tableView = UITableView.init(frame: .zero, style: .plain)
         _tableView.delegate = self
@@ -26,9 +26,9 @@ open class CTBaseAPIViewController: UIViewController {
         return _tableView
     }()
     
-    lazy var dataSource:[[String:String]] = {
+    open var dataSource:[[String:String]] {
         return []
-    }()
+    }
 
-    var apiManager:CTNetworkingAPIManager? = nil
+    public var apiManager:CTNetworkingAPIManager? = nil
 }

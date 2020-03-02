@@ -9,12 +9,12 @@
 import CTNetworkingSwift
 
 extension CTBaseAPIViewController: CTNetworkingAPIManagerCallbackDelegate {
-    func requestDidSuccess(_ apiManager: CTNetworkingAPIManager) {
+    public func requestDidSuccess(_ apiManager: CTNetworkingAPIManager) {
         guard let contentString = apiManager.response?.logString() else { return }
         CTNetworkingSwiftAPIResultView.config(content: contentString, in: view)
     }
     
-    func requestDidFailed(_ apiManager: CTNetworkingAPIManager) {
+    public func requestDidFailed(_ apiManager: CTNetworkingAPIManager) {
         guard let contentString = apiManager.response?.logString() else { return }
         CTNetworkingSwiftAPIResultView.config(content: contentString, in: view)
     }

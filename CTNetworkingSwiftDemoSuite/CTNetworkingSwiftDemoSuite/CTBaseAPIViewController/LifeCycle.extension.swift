@@ -10,12 +10,13 @@ import UIKit
 import SwiftHandyFrame
 
 extension CTBaseAPIViewController {
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
+        view.backgroundColor = .white
     }
-    
-    override func viewWillLayoutSubviews() {
+
+    open override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         tableView.hf.fill()
     }

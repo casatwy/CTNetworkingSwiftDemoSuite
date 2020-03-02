@@ -10,7 +10,7 @@ import Foundation
 import SwiftHandyFrame
 
 extension CTPagableAPIViewController {
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
@@ -21,7 +21,7 @@ extension CTPagableAPIViewController {
         apiManager?.delegate = self
     }
     
-    override func viewWillLayoutSubviews() {
+    override open func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         loadFirstPageButton.sizeToFit()

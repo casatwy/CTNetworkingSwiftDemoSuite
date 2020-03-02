@@ -10,7 +10,7 @@ import Foundation
 import CTNetworkingSwift
 
 extension CTPagableAPIViewController:CTNetworkingAPIManagerCallbackDelegate {
-    func requestDidSuccess(_ apiManager: CTNetworkingAPIManager) {
+    public func requestDidSuccess(_ apiManager: CTNetworkingAPIManager) {
         guard let pagableAPIManager = apiManager as? CTNetworkingAPIManagerPagable else { return }
 
         if pagableAPIManager.isLastPage {
@@ -23,7 +23,7 @@ extension CTPagableAPIViewController:CTNetworkingAPIManagerCallbackDelegate {
         CTNetworkingSwiftAPIResultView.config(content: content, in: view)
     }
     
-    func requestDidFailed(_ apiManager: CTNetworkingAPIManager) {
+    public func requestDidFailed(_ apiManager: CTNetworkingAPIManager) {
         statusLabel.text = "fail"
         guard let content = apiManager.response?.logString() else { return }
         CTNetworkingSwiftAPIResultView.config(content: content, in: view)

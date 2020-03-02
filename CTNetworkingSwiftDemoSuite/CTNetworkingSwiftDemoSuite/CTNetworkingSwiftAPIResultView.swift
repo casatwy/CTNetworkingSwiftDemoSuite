@@ -89,7 +89,13 @@ class CTNetworkingSwiftAPIResultView: UIView {
     }()
     
     lazy var activityIndicatorView:UIActivityIndicatorView = {
-        let _activityIndicatorView = UIActivityIndicatorView.init(style: .large)
+        let _activityIndicatorView = UIActivityIndicatorView.init()
+        if #available(iOS 13.0, *) {
+            _activityIndicatorView.style = .large
+        } else {
+            _activityIndicatorView.style = .whiteLarge
+        }
+        
         _activityIndicatorView.hidesWhenStopped = true
         _activityIndicatorView.color = .gray
         _activityIndicatorView.backgroundColor = .white
@@ -100,6 +106,8 @@ class CTNetworkingSwiftAPIResultView: UIView {
     
     lazy var tapGestureRecognizer:UITapGestureRecognizer = {
         let _tapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(didRecognizedTapGestureRecognizer(_:)))
+        _tapGestureRecognizer.numberOfTapsRequired = 1
+        _tapGestureRecognizer.numberOfTouchesRequired = 1
         return _tapGestureRecognizer
     }()
 }

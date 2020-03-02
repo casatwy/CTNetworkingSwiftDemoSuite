@@ -9,9 +9,9 @@
 import UIKit
 import SwiftHandyFrame
 
-class CTBaseAPITableViewCell: UITableViewCell {
+public class CTBaseAPITableViewCell: UITableViewCell {
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         guard let textLabel = textLabel else { return }
         guard let detailTextLabel = detailTextLabel else { return }

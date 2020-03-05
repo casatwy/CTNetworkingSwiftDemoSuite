@@ -24,7 +24,7 @@ class CTNetworkingSwiftAPIResultView: UIView {
     
     private func setupView() {
         backgroundColor = UIColor.init(displayP3Red: 0, green: 0, blue: 0, alpha: 0.8)
-        textView.addGestureRecognizer(tapGestureRecognizer)
+        self.addGestureRecognizer(tapGestureRecognizer)
         
         addSubview(textView)
         addSubview(activityIndicatorView)

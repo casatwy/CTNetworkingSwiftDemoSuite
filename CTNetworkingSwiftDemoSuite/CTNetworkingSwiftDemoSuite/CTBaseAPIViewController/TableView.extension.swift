@@ -13,8 +13,10 @@ extension CTBaseAPIViewController: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: UITableViewDelegate
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.textLabel?.text = dataSource[indexPath.row][Constants.DataSource.kTitle]
-        cell.detailTextLabel?.text = dataSource[indexPath.row][Constants.DataSource.kClass]
+        guard let title = dataSource[indexPath.row][Constants.DataSource.kTitle] else { return }
+        guard let detail = dataSource[indexPath.row][Constants.DataSource.kClass] else { return }
+        guard let _cell = cell as? CTBaseAPITableViewCell else { return }
+        _cell.config(title: title, detail: detail)
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

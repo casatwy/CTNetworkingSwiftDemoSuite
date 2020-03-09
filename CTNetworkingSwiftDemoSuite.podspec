@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CTNetworkingSwiftDemoSuite"
-  s.version      = "4"
+  s.version      = "5"
   s.summary      = "CTNetworkingSwiftDemoSuite"
-  s.swift_version= "4.2"
+  s.swift_version= "5.1"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?

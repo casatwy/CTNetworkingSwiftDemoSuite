@@ -11,18 +11,18 @@ import Foundation
 extension CTPagableAPIViewController {
     @objc func didTappedLoadNextPageButton() {
         statusLabel.text = "loading..."
-        apiManager?.loadData()
-        CTNetworkingSwiftAPIResultView.showInView(view)
+        
+        if apiManager?.isLastPage ?? false {
+            statusLabel.text = "reached last page \(apiManager?.currentPageNumber ?? -1)"
+        } else {
+            apiManager?.loadNextPage()
+            CTNetworkingSwiftAPIResultView.showInView(view)
+        }
     }
     
     @objc func didTappedLoadFirstPageButton() {
         statusLabel.text = "loading..."
-        guard let _apiManager = apiManager else { return }
-        if _apiManager.isLastPage {
-            statusLabel.text = "reached last page \(_apiManager.currentPageNumber)"
-        } else {
-            _apiManager.loadNextPage()
-            CTNetworkingSwiftAPIResultView.showInView(view)
-        }
+        apiManager?.loadData()
+        CTNetworkingSwiftAPIResultView.showInView(view)
     }
 }

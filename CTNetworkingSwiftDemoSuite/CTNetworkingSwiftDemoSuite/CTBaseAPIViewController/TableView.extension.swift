@@ -20,6 +20,7 @@ extension CTBaseAPIViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
         tableView.deselectRow(at: indexPath, animated: true)
         guard let apiManagerClassName = dataSource[indexPath.row][Constants.DataSource.kClass] else { return }
         guard let apiManagerClass = NSClassFromString("\(apiManagerClassName)") as? NSObject.Type else { return }

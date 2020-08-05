@@ -31,4 +31,6 @@ open class CTBaseAPIViewController : UIViewController {
     }
 
     public var apiManager:CTNetworkingAPIManager? = nil
+    
+    var selectedIndexPath:IndexPath? = nil
 }
